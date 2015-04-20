@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  space_id: 1
+  checkin: 2015-04-20 13:25:02
+  checkout: 2015-04-20 13:25:02
+  confirm_date: 2015-04-20 13:25:02
+  confirm_by: 1
+  pay_date: 2015-04-20 13:25:02
+  pay_type: MyString
+  status: MyString
+  active: false
+
+two:
+  space_id: 1
+  checkin: 2015-04-20 13:25:02
+  checkout: 2015-04-20 13:25:02
+  confirm_date: 2015-04-20 13:25:02
+  confirm_by: 1
+  pay_date: 2015-04-20 13:25:02
+  pay_type: MyString
+  status: MyString
+  active: false

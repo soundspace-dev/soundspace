@@ -1,0 +1,1 @@
+json.extract! @space, :id, :name, :user_id, :features, :description, :equipment, :rate_hourly, :rate_halfday, :rate_daily, :rate_weekly, :address, :city, :state, :active, :calendar_id, :created_at, :updated_at

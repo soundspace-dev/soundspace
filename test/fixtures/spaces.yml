@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  owner_id: 1
+  features: MyText
+  description: MyText
+  equipment: MyText
+  rate_hourly: 1
+  rate_halfday: 1
+  rate_daily: 1
+  rate_weekly: 1
+  address: MyString
+  city: MyString
+  state: MyString
+  active: false
+  calendar_id: 1
+
+two:
+  name: MyString
+  owner_id: 1
+  features: MyText
+  description: MyText
+  equipment: MyText
+  rate_hourly: 1
+  rate_halfday: 1
+  rate_daily: 1
+  rate_weekly: 1
+  address: MyString
+  city: MyString
+  state: MyString
+  active: false
+  calendar_id: 1

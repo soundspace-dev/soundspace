@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @space.name %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @space.user_id %>
+</p>
+
+<p>
+  <strong>Features:</strong>
+  <%= @space.features %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @space.description %>
+</p>
+
+<p>
+  <strong>Equipment:</strong>
+  <%= @space.equipment %>
+</p>
+
+<p>
+  <strong>Rate hourly:</strong>
+  <%= @space.rate_hourly %>
+</p>
+
+<p>
+  <strong>Rate halfday:</strong>
+  <%= @space.rate_halfday %>
+</p>
+
+<p>
+  <strong>Rate daily:</strong>
+  <%= @space.rate_daily %>
+</p>
+
+<p>
+  <strong>Rate weekly:</strong>
+  <%= @space.rate_weekly %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @space.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @space.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @space.state %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @space.active %>
+</p>
+
+<p>
+  <strong>Calendar:</strong>
+  <%= @space.calendar_id %>
+</p>
+
+<%= link_to 'Edit', edit_space_path(@space) %> |
+<%= link_to 'Back', spaces_path %>

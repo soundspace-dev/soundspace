@@ -1,0 +1,53 @@
+<%= form_for(@booking) do |f| %>
+  <% if @booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% @booking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :space_id %><br>
+    <%= f.number_field :space_id %>
+  </div>
+  <div class="field">
+    <%= f.label :checkin %><br>
+    <%= f.datetime_select :checkin %>
+  </div>
+  <div class="field">
+    <%= f.label :checkout %><br>
+    <%= f.datetime_select :checkout %>
+  </div>
+  <div class="field">
+    <%= f.label :confirm_date %><br>
+    <%= f.datetime_select :confirm_date %>
+  </div>
+  <div class="field">
+    <%= f.label :confirm_by %><br>
+    <%= f.number_field :confirm_by %>
+  </div>
+  <div class="field">
+    <%= f.label :pay_date %><br>
+    <%= f.datetime_select :pay_date %>
+  </div>
+  <div class="field">
+    <%= f.label :pay_type %><br>
+    <%= f.text_field :pay_type %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

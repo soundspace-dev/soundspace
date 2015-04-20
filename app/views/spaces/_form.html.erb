@@ -1,0 +1,73 @@
+<%= form_for(@space) do |f| %>
+  <% if @space.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@space.errors.count, "error") %> prohibited this space from being saved:</h2>
+
+      <ul>
+      <% @space.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :features %><br>
+    <%= f.text_area :features %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :equipment %><br>
+    <%= f.text_area :equipment %>
+  </div>
+  <div class="field">
+    <%= f.label :rate_hourly %><br>
+    <%= f.number_field :rate_hourly %>
+  </div>
+  <div class="field">
+    <%= f.label :rate_halfday %><br>
+    <%= f.number_field :rate_halfday %>
+  </div>
+  <div class="field">
+    <%= f.label :rate_daily %><br>
+    <%= f.number_field :rate_daily %>
+  </div>
+  <div class="field">
+    <%= f.label :rate_weekly %><br>
+    <%= f.number_field :rate_weekly %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :calendar_id %><br>
+    <%= f.number_field :calendar_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

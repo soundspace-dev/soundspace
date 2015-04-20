@@ -1,0 +1,55 @@
+<h1>Listing spaces</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Owner</th>
+      <th>Features</th>
+      <th>Description</th>
+      <th>Equipment</th>
+      <th>Rate hourly</th>
+      <th>Rate halfday</th>
+      <th>Rate daily</th>
+      <th>Rate weekly</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Active</th>
+      <th>Calendar</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spaces.each do |space| %>
+      <tr>
+        <td><%= space.name %></td>
+        <td><%= space.user_id %></td>
+        <td><%= space.features %></td>
+        <td><%= space.description %></td>
+        <td><%= space.equipment %></td>
+        <td><%= space.rate_hourly %></td>
+        <td><%= space.rate_halfday %></td>
+        <td><%= space.rate_daily %></td>
+        <td><%= space.rate_weekly %></td>
+        <td><%= space.address %></td>
+        <td><%= space.city %></td>
+        <td><%= space.state %></td>
+        <td><%= space.active %></td>
+        <td><%= space.calendar_id %></td>
+        <td><%= link_to 'Show', space %></td>
+        <% if space.user.id == current_user.id %>
+        <td><%= link_to 'Edit', edit_space_path(space) %></td>
+        <td><%= link_to 'Destroy', space, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% else %>
+        <td colspan="2"></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Space', new_space_path %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Space:</strong>
+  <%= @booking.space_id %>
+</p>
+
+<p>
+  <strong>Checkin:</strong>
+  <%= @booking.checkin %>
+</p>
+
+<p>
+  <strong>Checkout:</strong>
+  <%= @booking.checkout %>
+</p>
+
+<p>
+  <strong>Confirm date:</strong>
+  <%= @booking.confirm_date %>
+</p>
+
+<p>
+  <strong>Confirm by:</strong>
+  <%= @booking.confirm_by %>
+</p>
+
+<p>
+  <strong>Pay date:</strong>
+  <%= @booking.pay_date %>
+</p>
+
+<p>
+  <strong>Pay type:</strong>
+  <%= @booking.pay_type %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @booking.status %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @booking.active %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>
