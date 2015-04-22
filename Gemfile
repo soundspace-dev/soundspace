@@ -29,8 +29,8 @@ gem 'spring',        group: :development
 # Devise for User Management
 gem 'devise'
 
-
-
+# OAuth for Facebook / Devise
+gem 'omniauth-facebook'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

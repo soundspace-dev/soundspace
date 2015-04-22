@@ -1,6 +1,6 @@
 class SpacesController < ApplicationController
   before_action :set_space, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
   before_action :verify_owner, only: [:edit, :update, :destroy]
   
   # GET /spaces
@@ -17,6 +17,7 @@ class SpacesController < ApplicationController
   # GET /spaces/new
   def new
     @space = Space.new
+    @space.user_id = current_user.id
   end
 
   # GET /spaces/1/edit
@@ -30,7 +31,7 @@ class SpacesController < ApplicationController
 
     respond_to do |format|
       if @space.save
-        format.html { redirect_to @space, notice: 'Space was successfully created.' }
+        format.html { redirect_to @space, notice: 'Space successfully created.'  }
         format.json { render :show, status: :created, location: @space }
       else
         format.html { render :new }
@@ -44,7 +45,7 @@ class SpacesController < ApplicationController
   def update
     respond_to do |format|
       if @space.update(space_params)
-        format.html { redirect_to @space, notice: 'Space was successfully updated.' }
+        format.html { redirect_to @space, notice: 'Space successfully updated.'  }
         format.json { render :show, status: :ok, location: @space }
       else
         format.html { render :edit }
@@ -58,7 +59,7 @@ class SpacesController < ApplicationController
   def destroy
     @space.destroy
     respond_to do |format|
-      format.html { redirect_to spaces_url, notice: 'Space was successfully destroyed.' }
+      format.html { redirect_to spaces_url, notice: 'Space successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -70,7 +71,7 @@ class SpacesController < ApplicationController
     end
   
   def verify_owner
-    if @space.user.id != current_user.id
+    if user_signed_in? && @space.user_id != current_user.id
       redirect_to root_path
     end
   end
