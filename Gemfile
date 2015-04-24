@@ -32,6 +32,15 @@ gem 'devise'
 # OAuth for Facebook / Devise
 gem 'omniauth-facebook'
 
+# For aws cloud storage
+gem 'fog'
+
+# Image resizing
+gem "mini_magick"
+
+# File upload solution
+gem 'carrierwave'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

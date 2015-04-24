@@ -4,4 +4,5 @@ class Space < ActiveRecord::Base
   has_many :reviews
   
   validates :user_id, presence: true 
+  
 end
