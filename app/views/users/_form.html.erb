@@ -28,7 +28,7 @@
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    <%= image_tag(@user.image.medium_image) %> 
+    <%= image_tag(@user.image.medium_image) if @user.image? %> 
     <%= f.file_field :image %>
   </div>
   <div class="actions">

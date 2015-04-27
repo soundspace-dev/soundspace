@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Photo</th>
       <th>Name</th>
       <th>Owner</th>
       <th>Features</th>
@@ -24,6 +25,7 @@
   <tbody>
     <% @spaces.each do |space| %>
       <tr>
+        <td><%= image_tag(space.photos.small_image) if space.photos? %></td>
         <td><%= space.name %></td>
         <td><%= space.user_id %></td>
         <td><%= space.features %></td>

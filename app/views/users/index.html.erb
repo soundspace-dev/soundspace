@@ -15,7 +15,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= image_tag(user.image.medium_image) %></td> 
+        <td><%= image_tag(user.image.medium_image) if user.image? %></td> 
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.bio %></td>

@@ -2,7 +2,7 @@
 
 
 <p>
-  <%= image_tag @space.photos_url() if @space.photos? %>
+  <%= image_tag(@space.photos.large_image) if @space.photos? %>
 </p>
 
 <p>
