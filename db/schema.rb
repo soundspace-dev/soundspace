@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421211614) do
+ActiveRecord::Schema.define(version: 20150424235655) do
 
   create_table "bookings", force: true do |t|
     t.integer  "space_id"
@@ -37,26 +37,8 @@ ActiveRecord::Schema.define(version: 20150421211614) do
     t.datetime "updated_at"
   end
 
-  create_table "spaces", force: true do |t|
-    t.string   "name"
-    t.integer  "user_id"
-    t.text     "features"
-    t.text     "description"
-    t.text     "equipment"
-    t.integer  "rate_hourly"
-    t.integer  "rate_halfday"
-    t.integer  "rate_daily"
-    t.integer  "rate_weekly"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.boolean  "active"
-    t.integer  "calendar_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "spaces", ["user_id"], name: "index_spaces_on_user_id"
+# Could not dump table "spaces" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "users", force: true do |t|
     t.string   "name"

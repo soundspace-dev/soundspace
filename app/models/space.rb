@@ -5,4 +5,5 @@ class Space < ActiveRecord::Base
   
   validates :user_id, presence: true 
   
+  mount_uploader :photos, PhotoUploader
 end

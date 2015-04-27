@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+  <%= image_tag @space.photos_url() if @space.photos? %>
+</p>
+
 <p>
   <strong>Name:</strong>
   <%= @space.name %>

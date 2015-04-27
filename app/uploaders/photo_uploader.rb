@@ -12,8 +12,6 @@ class PhotoUploader < CarrierWave::Uploader::Base
     'default_photo.png' #rails will look at 'app/assets/images/default_avatar.png'
   end
 
-
-
   # Create different versions of your uploaded files:
   version :large_image do
     process :resize_to_fill => [900, 450]
@@ -28,7 +26,5 @@ class PhotoUploader < CarrierWave::Uploader::Base
   def extension_white_list
     %w(jpg jpeg gif png)
   end
-
-
 
 end

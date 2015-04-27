@@ -1,4 +1,4 @@
-<%= form_for(@space) do |f| %>
+<%= form_for @space, html: { multipart: true } do |f| %>
   <% if @space.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@space.errors.count, "error") %> prohibited this space from being saved:</h2>
@@ -68,7 +68,7 @@
     <%= f.number_field :calendar_id %>
   </div>
   <div class="field">
-    <%= f.file_field :photos %>
+    <%= f.file_field :photos, multiple: true, name: "space[photos]" %>
   </div>
   <div class="actions">
     <%= f.submit %>
