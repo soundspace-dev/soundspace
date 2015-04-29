@@ -1,8 +1,7 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
   include CarrierWave::MiniMagick
-  storage :file
-  #storage :fog
+  storage :fog
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url

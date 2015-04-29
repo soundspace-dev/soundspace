@@ -1,4 +1,4 @@
-class PhotoUploader < CarrierWave::Uploader::Base
+class Photo4Uploader < CarrierWave::Uploader::Base
   
   include CarrierWave::MiniMagick
   storage :fog

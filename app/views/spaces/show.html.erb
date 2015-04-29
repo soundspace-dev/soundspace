@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 
-<p>
-  <%= image_tag(@space.photos.large_image) if @space.photos? %>
-</p>
+<p><%= image_tag(@space.photos.large_image) if @space.photos? %></p>
+<p><%= image_tag(@space.photo2.small_image) if @space.photo2? %> <%= image_tag(@space.photo3.small_image) if @space.photo3? %> <%= image_tag(@space.photo4.small_image) if @space.photo4? %> <%= image_tag(@space.photo5.small_image) if @space.photo5? %></p>
 
 <p>
   <strong>Name:</strong>
